@@ -3,5 +3,12 @@ This work is licensed under the CC BY-NC-SA 4.0 (Creative Commons Attribution-No
 To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 Please cite the following paper when you use any of the material.
 	COMING SOON
+	@INPROCEEDINGS{,
+     author = {Rach, Niklas and Schindler, Carolin and Feustel, Isabel and Daxenberger, Johannes and Minker, Wolfgang and Ultes, Stefan},
+     title = {From Argument Search to Argumentative Dialogue: A Topic-independent Approach to Argument Acquisition for Dialogue Systems},
+	 booktitle = {Accepted for presentation at the 22nd Annual Meeting of the Special Interest Group on Discourse and Dialogue},
+     year = {2021},
+     location = {Singapore}
+	}
 
 Thanks to Niklas Rach for providing the Individual class in ontology.py and the Definitions.owl file.
