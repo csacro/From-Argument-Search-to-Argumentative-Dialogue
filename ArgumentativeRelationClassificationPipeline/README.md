@@ -25,9 +25,15 @@ Python file offering optional services. Used to initialize logging.
 
 ## Running the Argumentative Relation Classification Pipeline
 ### Prerequisites
-Install all requirements from the requirements.txt file.  
-In line 36 of run.py enter your ``userID`` and ``apiKey`` to access ArgumenText.  
-In the directory relation_processing/predict_relation replace the content of the model folder with the [trained models](https://drive.google.com/drive/folders/1wqd2sR-i8MInHCVeFPk-PLWh9Cg3HAtv?usp=sharing).
+Install all requirements from the requirements.txt file (tested with Python 3.8).
+In case ``simplerepresentations==0.0.5`` is not available, please, install it directly from source via
+```bash
+git clone https://github.com/AliOsm/simplerepresentations
+cd simplerepresentations
+pip install .
+```
+In the ``ArgumenText_accessData.json`` file, enter your ``userID`` and ``apiKey`` to access ArgumenText.  
+In the directory ``relation_processing/predict_relation``, replace the content of the ``model`` folder with the [trained models](https://drive.google.com/drive/folders/1wqd2sR-i8MInHCVeFPk-PLWh9Cg3HAtv?usp=sharing).
 Leave the directory structure as is.
 ### Command Line Interface
-To show the possible configurations and details about the single parameters execute ``run.py -h``.  
+To show the possible configurations and details about the single parameters, execute ``run.py -h``.  

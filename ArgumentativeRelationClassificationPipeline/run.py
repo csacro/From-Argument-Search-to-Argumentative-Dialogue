@@ -1,3 +1,4 @@
+import json
 import logging
 import time
 import util
@@ -33,7 +34,10 @@ def main():
     logging.info(args)
 
     # query argument search engine
-    search_engine = ArgumenText("userID", "apiKey")
+    access_data_file = open('ArgumenText_accessData.json')
+    access_data = json.load(access_data_file)
+    access_data_file.close()
+    search_engine = ArgumenText(access_data.get("userId"), access_data.get("apiKey"))
     if args.classify is None:
         sentences = search_engine.query_search_api(args.MajorClaim)
         if args.search is not None and args.search < len(sentences):
@@ -48,7 +52,7 @@ def main():
             sentences = stance_pro[:pro_len]
             sentences.extend(stance_con[:con_len])
     else:
-        if len(args.classify) is 1:
+        if len(args.classify) == 1:
             args.classify = args.classify[0]
         sentences = search_engine.query_classify_api(args.MajorClaim, args.classify)
     arguments = ArgumentList(args.MajorClaim, sentences)

@@ -20,10 +20,10 @@ def generate_prob_matrix(arguments):
     num_arguments = len(arguments)
     prob_matrix = np.zeros((num_arguments, num_arguments))
     for rel_from in range(1, num_arguments):
-		# starting from 1 as the Major Claim (the 0 argument) has no outgoing relation
+        # starting from 1 as the Major Claim (the 0 argument) has no outgoing relation
         for rel_to in arguments[rel_from].compare_list:
             if rel_from == rel_to:
-				# no argument can target itself
+                # no argument can target itself
                 continue
             logging.info("calculating: " + str(rel_from) + "-->" + str(rel_to))
             feature, _ = representation_model(text_a=[arguments[rel_to].sentence.lower()],
